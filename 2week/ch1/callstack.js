@@ -1,3 +1,4 @@
+// 
 function first() { 
   second(); // 2 번 
   console.log('첫 번째'); // 6 번
