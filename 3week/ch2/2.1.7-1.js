@@ -17,3 +17,21 @@ promise
   .finally(() => { // 끝나고 무조건 실행
     console.log('무조건');
   });
+
+const check = new Promise((one, two) => {
+  if(true){
+    one('성공');
+  } else{
+    two('실패');
+  }
+});
+check
+  .then((message) => {
+    console.log(message);
+  })
+  .catch((error)=>{
+    console.log(error);
+  })
+  .finally(() => {
+    console.log('무조건');
+  });
