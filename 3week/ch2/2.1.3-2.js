@@ -1,3 +1,10 @@
+var es = 'ES';
+
+// 안에서 해도 되고 밖에서 선언도 가능하다.
+var sayNode = function() {
+  console.log('Node');
+};
+
 const newObject = {
   sayJS() {
     console.log('JS');

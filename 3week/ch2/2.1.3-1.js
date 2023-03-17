@@ -8,7 +8,11 @@ var oldObject = {
   },
   sayNode: sayNode,
 };
-oldObject[es + 6] = 'Fantastic';
+oldObject[es + 5] = 'Fantastic';
+oldObject[es + 22] = 'Fantastic add';
+
 oldObject.sayNode(); // Node
 oldObject.sayJS(); // JS
-console.log(oldObject.ES6); // Fantastic
+
+console.log(oldObject.ES5); // Fantastic
+console.log(oldObject.ES22); // Fantastic add
