@@ -5,6 +5,7 @@ https.createServer({
   cert: fs.readFileSync('/6week/ch4/cert'),
   key: fs.readFileSync('도메인 비밀키 경로'),
   ca: [
+    // 인증키
     fs.readFileSync('/6week/ch4/cert/'),
     fs.readFileSync('상위 인증서 경로'),
   ],
