@@ -21,6 +21,7 @@ http.createServer(async (req, res) => {
     const expires = new Date();
     // 쿠키 유효 시간을 현재시간 + 5분으로 설정
     expires.setMinutes(expires.getMinutes() + 5);
+    // 5분 후 자동삭제
     res.writeHead(302, {
       Location: '/',
       'Set-Cookie': `name=${encodeURIComponent(name)}; Expires=${expires.toGMTString()}; HttpOnly; Path=/`,
