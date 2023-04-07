@@ -10,11 +10,13 @@ http.createServer(async (req, res) => {
         const data = await fs.readFile('./restFront.html');
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
         return res.end(data);
-      } else if (req.url === '/about') {
+      } 
+      else if (req.url === '/about') {
         const data = await fs.readFile('./about.html');
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
         return res.end(data);
-      } else if (req.url === '/users') {
+      } 
+      else if (req.url === '/users') {
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
         return res.end(JSON.stringify(users));
       }
@@ -22,10 +24,12 @@ http.createServer(async (req, res) => {
       try {
         const data = await fs.readFile(`.${req.url}`);
         return res.end(data);
-      } catch (err) {
+      } 
+      catch (err) {
         // 주소에 해당하는 라우트를 못 찾았다는 404 Not Found error 발생
       }
-    } else if (req.method === 'POST') {
+    } 
+    else if (req.method === 'POST') {
       if (req.url === '/user') {
         let body = '';
         // 요청의 body를 stream 형식으로 받음
@@ -66,7 +70,8 @@ http.createServer(async (req, res) => {
     }
     res.writeHead(404);
     return res.end('NOT FOUND');
-  } catch (err) {
+  } 
+  catch (err) {
     console.error(err);
     res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end(err.message);
