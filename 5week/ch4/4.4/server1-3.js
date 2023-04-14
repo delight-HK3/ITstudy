@@ -2,7 +2,7 @@ const https = require('https');
 const fs = require('fs');
 
 https.createServer({
-  cert: fs.readFileSync('/6week/ch4/cert'),
+  cert: fs.readFileSync('./6week/ch4/cert'),
   key: fs.readFileSync('도메인 비밀키 경로'),
   ca: [
     // 인증키
