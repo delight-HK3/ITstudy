@@ -1,0 +1,12 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express.js",
+  "scripts": {
+    "start": "node express"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
